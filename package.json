@@ -1,0 +1,33 @@
+{
+  "name": "progdolgozat",
+  "scripts": {
+    "dev": "bun  --watch src/index.tsx",
+    "lint": "bunx eslint \"src/**/*.ts\"",
+    "lint:fix": "bunx eslint \"src/**/*.ts\" --fix",
+    "migration:generate": "bunx drizzle-kit generate",
+    "migration:push": "bunx drizzle-kit migrate",
+    "migrate": "bun run migration:generate && bun run migration:push"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.1.1",
+    "@elysiajs/html": "^1.1.1",
+    "@elysiajs/static": "^1.1.1",
+    "@kitajs/ts-html-plugin": "^4.1.0",
+    "@lucia-auth/adapter-drizzle": "^1.1.0",
+    "better-sqlite3": "^11.3.0",
+    "drizzle-orm": "^0.33.0",
+    "elysia": "^1.1.16",
+    "lucia": "^3.2.0",
+    "marked": "^14.1.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.1",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/bun": "^1.1.10",
+    "drizzle-kit": "^0.24.2",
+    "eslint": "^9.11.1",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2"
+  }
+}

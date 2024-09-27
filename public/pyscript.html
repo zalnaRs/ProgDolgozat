@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/mini-coi.js"></script>
+    <meta charset="UTF-8">
+    <title>Docu</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.2/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.6.2/core.js"></script>
+</head>
+<body>
+<textarea name="" id="code" cols="30" rows="10"></textarea>
+<button id="a">aaa</button>
+<script type="mpy" terminal worker service-worker="/mini-coi.js" id="terminal">print('Hello, World!')</script>
+
+<script>
+    const a = document.querySelector("#a")
+    const terminal = document.querySelector("#terminal")
+    const code = document.querySelector("#code")
+
+    a.onclick = () => {
+        terminal.process(code.value)
+    }
+</script>
+</body>
+</html>
